@@ -1,4 +1,5 @@
-#Name generator. 
+#!/usr/bin/env python3.2
+
 
 from random import choice
 import cgitb
@@ -68,8 +69,8 @@ li.sort()
 print(len(li))
 for i in li:
 	if li.index(i)%5!=0:names.write(', ')
-	if li.index(i)%5==0:names.write('\n')
-	names.write(i)
+	if li.index(i)%5==0:names.write('</br>')
+	print(i)
 
 
 print("</body>")
