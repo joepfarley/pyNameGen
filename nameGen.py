@@ -69,9 +69,7 @@ li.sort(key=len)
 columns=5
 print('<ol>')
 for i in li:
-	if li.index(i)%columns!=0:print(', ')
-	if li.index(i)%columns==0:print('</br>')
-	print(i)
+	print("<li>{0:^0}</li>".format(i))
 
 
-print("</body>")
+print("</li></body>")
