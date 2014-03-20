@@ -50,7 +50,7 @@ def nameGen(len=1,start=con,mid=midsoft,ending=ends):
 	for i in range(0,len):
 		name.append(choice(mid))
 		if mid==midhard:name.append(choice(vo2))
-	name.append(choice(end))
+	name.append(choice(ending))
 	return("".join(name).title())
 
 
