@@ -62,13 +62,13 @@ for i in range(1,x):
 
 	
 	
-names=open("names.txt",'a')
+
 li=list(set(li))
 li.sort()
 print(len(li))
 for i in li:
-	if li.index(i)%5!=0:names.write(', ')
-	if li.index(i)%5==0:names.write('</br>')
+	if li.index(i)%5!=0:print(', ')
+	if li.index(i)%5==0:print('</br>')
 	print(i)
 
 
