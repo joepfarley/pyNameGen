@@ -1,6 +1,36 @@
 #Name generator. 
 
 from random import choice
+import cgitb
+import sys
+import time
+cgitb.enable()
+
+
+print("Content-Type: text/html;charset=utf-8")
+print("")
+
+print("""<style type="text/css"><!--/*--><![CDATA[/*><!--*/ 
+    h1 { color: #9999ff; background-color: #000000 fontsize:2em;}
+    body { color: #ffffff; background-color: #000000; }
+    a:link { color: #0000CC; }
+    p, address {margin-left: 2em;}
+    span {font-size: smaller;}
+    prime {color: #ff8888; background-color: #000000;}
+    twin {color: #ff99ff; background-color: #000000;}
+    circle {color: #ff9999; background-color: #000000;}
+    ol {
+    font-family:monospace;
+    font-size:16;
+      columns: 5;
+     -gecko-colums: 5;
+     -webkit-columns: 5;
+     -mox-columns: 5;
+        }
+/*]]>*/--></style>""")
+
+print
+print("<body>")
 
 
 '''Beginnings'''
@@ -40,3 +70,6 @@ for i in li:
 	if li.index(i)%5!=0:names.write(', ')
 	if li.index(i)%5==0:names.write('\n')
 	names.write(i)
+
+
+print("</body>")
