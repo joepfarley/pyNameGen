@@ -42,9 +42,9 @@ midsoft=["ani","ana","eni","eno","ila","ira","ini","ota","a","e","i","o","u"]
 midhard=["k","kh",'c','ch','t','v','d','fah','gor','shor','b','bin','f','fin','din','shin','fron','fon','don','quin','shen','zin','zon','xin','tor','khon']
 
 '''endings'''
-end=["s","m","z","t","n","r",'']
-softEnd=[]
-def nameGen(len=1,start=con,mid=midsoft):
+ends=["s","m","z","t","n","r",'']
+softEnds=['a','e','i','o','u','y','as','es','is','os','us']
+def nameGen(len=1,start=con,mid=midsoft,ending=ends):
 	name=[]
 	name.append(choice(start))
 	for i in range(0,len):
@@ -65,10 +65,12 @@ for i in range(1,x):
 
 li=list(set(li))
 li.sort()
-print(len(li))
+li.sort(key=len)
+columns=5
+print('<ol>')
 for i in li:
-	if li.index(i)%5!=0:print(', ')
-	if li.index(i)%5==0:print('</br>')
+	if li.index(i)%columns!=0:print(', ')
+	if li.index(i)%columns==0:print('</br>')
 	print(i)
 
 
