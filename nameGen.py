@@ -4,6 +4,7 @@ from random import choice
 import cgitb
 import sys
 import time
+
 cgitb.enable()
 
 
@@ -33,17 +34,16 @@ print
 print("<body>")
 
 
-'''Beginnings'''
-con=["B","C","Ch","D","F","G","Gl","H","J","K","Kh","L","M", "N", "P","R","S","Sh","St","Sl","T","Th","V","W","Z","Zh"]
-vo=['Al','An','Am','As','Ap','El','En','Em','Ev','Ez','Il','In','Im','I','Iz','Iv','Ih','Ix','Ol','On','Ov','Ox','Yn', 'Yl','Ul','Un', 'Um','']
-vo2=["A","E","I","O","U","Y","AA","Ie","Ei","Ae","Ou"]
-'''middles'''
-midsoft=["ani","ana","eni","eno","ila","ira","ini","ota","a","e","i","o","u"]
-midhard=["k","kh",'c','ch','t','v','d','fah','gor','shor','b','bin','f','fin','din','shin','fron','fon','don','quin','shen','zin','zon','xin','tor','khon']
+syls=[
+["B","C","Ch","D","F","G","Gl","H","J","K","Kh","L","M", "N", "P","R","S","Sh","St","Sl","T","Th","V","W","Z","Zh"].
+['Al','An','Am','As','Ap','El','En','Em','Ev','Ez','Il','In','Im','I','Iz','Iv','Ih','Ix','Ol','On','Ov','Ox','Yn', 'Yl','Ul','Un', 'Um',''].
+["A","E","I","O","U","Y","AA","Ie","Ei","Ae","Ou"].
+["ani","ana","eni","eno","ila","ira","ini","ota","a","e","i","o","u"].
+["k","kh",'c','ch','t','v','d','fah','gor','shor','b','bin','f','fin','din','shin','fron','fon','don','quin','shen','zin','zon','xin','tor','khon'].
+["s","m","z","t","n","r",''].
+['a','e','i','o','u','y','as','es','is','os','us'].
+]
 
-'''endings'''
-ends=["s","m","z","t","n","r",'']
-softEnds=['a','e','i','o','u','y','as','es','is','os','us']
 def nameGen(len=1,start=con,mid=midsoft,mid2=midhard,ending=ends):
 	name=[]
 	name.append(choice(start))
@@ -56,9 +56,18 @@ def nameGen(len=1,start=con,mid=midsoft,mid2=midhard,ending=ends):
 
 
 li=[]
-x=300
-for i in range(1,x):
-	li.append(nameGen(choice([3])))
+length=sys.argv[1]
+start=sys.argv[2]
+mid=sys.argv[3]
+mid2=sys.argv[4]
+end=sys.argv[5]
+
+
+
+for i in range(1,int(length)):
+	li.append(nameGen(start,mid,mid2,end))
+
+
 
 	
 	
