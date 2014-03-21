@@ -23,10 +23,6 @@ print("""<style type="text/css"><!--/*--><![CDATA[/*><!--*/
     ol {
     font-family:monospace;
     font-size:16;
-      columns: 5;
-     -gecko-colums: 5;
-     -webkit-columns: 5;
-     -mox-columns: 5;
         }
 /*]]>*/--></style>""")
 
@@ -35,19 +31,19 @@ print("<body>")
 
 
 syls=[
-["B","C","Ch","D","F","G","Gl","H","J","K","Kh","L","M", "N", "P","R","S","Sh","St","Sl","T","Th","V","W","Z","Zh"].
-['Al','An','Am','As','Ap','El','En','Em','Ev','Ez','Il','In','Im','I','Iz','Iv','Ih','Ix','Ol','On','Ov','Ox','Yn', 'Yl','Ul','Un', 'Um',''].
-["A","E","I","O","U","Y","AA","Ie","Ei","Ae","Ou"].
-["ani","ana","eni","eno","ila","ira","ini","ota","a","e","i","o","u"].
-["k","kh",'c','ch','t','v','d','fah','gor','shor','b','bin','f','fin','din','shin','fron','fon','don','quin','shen','zin','zon','xin','tor','khon'].
-["s","m","z","t","n","r",''].
-['a','e','i','o','u','y','as','es','is','os','us'].
+["B","C","Ch","D","F","G","Gl","H","J","K","Kh","L","M", "N", "P","R","S","Sh","St","Sl","T","Th","V","W","Z","Zh"],
+['Al','An','Am','As','Ap','El','En','Em','Ev','Ez','Il','In','Im','I','Iz','Iv','Ih','Ix','Ol','On','Ov','Ox','Yn', 'Yl','Ul','Un', 'Um',''],
+["A","E","I","O","U","Y","AA","Ie","Ei","Ae","Ou"],
+["ani","ana","eni","eno","ila","ira","ini","ota","a","e","i","o","u"],
+["k","kh",'c','ch','t','v','d','fah','gor','shor','b','bin','f','fin','din','shin','fron','fon','don','quin','shen','zin','zon','xin','tor','khon'],
+["s","m","z","t","n","r",''],
+['a','e','i','o','u','y','as','es','is','os','us']
 ]
 
-def nameGen(len=1,start=con,mid=midsoft,mid2=midhard,ending=ends):
+def nameGen(length,start,mid,mid2,ending):
 	name=[]
 	name.append(choice(start))
-	for i in range(0,len):
+	for i in range(0,length):
 		if i%2==0:name.append(choice(mid))
 		else:name.append(choice(mid2))
 	name.append(choice(ending))
@@ -56,16 +52,17 @@ def nameGen(len=1,start=con,mid=midsoft,mid2=midhard,ending=ends):
 
 
 li=[]
-length=sys.argv[1]
-start=sys.argv[2]
-mid=sys.argv[3]
-mid2=sys.argv[4]
-end=sys.argv[5]
+num=int(sys.argv[1])
+length=int(sys.argv[2])
+start=int(sys.argv[3])
+mid=int(sys.argv[4])
+mid2=int(sys.argv[5])
+end=int(sys.argv[6])
 
 
 
-for i in range(1,int(length)):
-	li.append(nameGen(start,mid,mid2,end))
+for i in range(0,num):
+	li.append(nameGen(length,syls[start],syls[mid],syls[mid2],syls[end]))
 
 
 
@@ -76,9 +73,9 @@ li=list(set(li))
 li.sort()
 li.sort(key=len)
 columns=5
-print('<ol>')
+print('<ul>')
 for i in li:
 	print("<li>{0:^0}</li>".format(i))
 
 
-print("</li></body>")
+print("</ui></body>")
