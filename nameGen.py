@@ -42,12 +42,15 @@ syls=[
 
 def nameGen(length,start,mid,mid2,ending):
 	name=[]
-	name.append(choice(start))
-	for i in range(0,length):
-		if i%2==0:name.append(choice(mid))
-		else:name.append(choice(mid2))
-	name.append(choice(ending))
-	return("".join(name).title())
+	result=""
+	while len(result)<3:
+	  name.append(choice(start))
+	  for i in range(0,length):
+		  if i%2==0:name.append(choice(mid))
+		  else:name.append(choice(mid2))
+	  name.append(choice(ending))
+	  result=("".join(name).title())
+	return(result)
 
 
 
