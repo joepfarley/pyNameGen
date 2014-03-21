@@ -44,12 +44,12 @@ midhard=["k","kh",'c','ch','t','v','d','fah','gor','shor','b','bin','f','fin','d
 '''endings'''
 ends=["s","m","z","t","n","r",'']
 softEnds=['a','e','i','o','u','y','as','es','is','os','us']
-def nameGen(len=1,start=con,mid=midsoft,ending=ends):
+def nameGen(len=1,start=con,mid=midsoft,mid2=midhard,ending=ends):
 	name=[]
 	name.append(choice(start))
 	for i in range(0,len):
-		name.append(choice(mid))
-		if mid==midhard:name.append(choice(vo2))
+		if i%2==0:name.append(choice(mid))
+		else:name.append(choice(mid2))
 	name.append(choice(ending))
 	return("".join(name).title())
 
@@ -58,7 +58,7 @@ def nameGen(len=1,start=con,mid=midsoft,ending=ends):
 li=[]
 x=300
 for i in range(1,x):
-	li.append(nameGen(choice([1])))
+	li.append(nameGen(choice([3])))
 
 	
 	
