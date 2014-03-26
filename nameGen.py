@@ -72,31 +72,34 @@ print("""
 
 
 syls1=[
-["b","d","g", "p","v","w","z"],
-['f','h','l','m','n','r','s','sh','th','w'],
-['c','ch','j','k','kh','q','t','x'],
-["a","e","i","o","u","y"],
-['al','an','am','as','ap','el','en','em','ev','ez','il','in','im','iz','iv','ih','ix','ol','on','ov','ox','yn', 'yl','ul','un', 'um'],
-['as','ash','es','esh','is','ish','os','osh','us','ush'],
-['ana','ane','ani','ano','anu','ena','ene','ani','eno','enu','ina','ine','ini','ino','inu','ona','one','oni','ono','onu','una','une','uni','uno','unu'],
-['ata','ate','ati','ato','atu','eta','ete','ati','eto','etu','ita','ite','iti','ito','itu','ota','ote','oti','oto','otu','uta','ute','uti','uto','utu'],
-['ara','are','ari','aro','aru','era','ere','ari','ero','eru','ira','ire','iri','iro','iru','ora','ore','ori','oro','oru','ura','ure','uri','uro','uru'],
-['as','es','is','os','us'],
-['ly','ley','la','li','te','ti','ny','ney','na','ni'],
-['lu','lo','to','tu','no','nu','tho','thu'],
-[' ','\'','-',' ',' ','\'','-',' ',' ','\'','-',' '],
-[' ','\'',' ','\'',' ','\'',' ','\'',' ','\'',' ','\''],
-['cho','chu','cha','che','chi','zho','zhu','zha','zhe','zhi','sho','shu','sha','she','shi','tho','thu','tha','the','thi','pha','phe','phi','pho','phu'],
-['at','et','it','ot','ut','ack','eck','ick','ock','uck','ach','ech','ich','och','uch','ak','ik','ek','ik','uk','ac','ic','ec','oc','uk'],
-['ha','he','hi','ho','hu','hy','wa','wo','we','wi','wu','ba','be','bi','bo','bu','va','ve','vi','vo','vu','za','ze','zi','zo','zu','la','le','li','lo','lu'],
-['1','2','3','4','5','6','7','8','9','0'],
-['first', 'second', 'third', 'fourth', 'prime']
-]
+      ["b","d","g", "p","v","w","z"],
+      ['f','h','l','m','n','r','s','sh','th','w'],
+      ['c','ch','j','k','kh','q','t','x'],
+      ["a","e","i","o","u","y"],
+      ['al','an','am','as','ap','el','en','em','ev','ez','il','in','im','iz','iv','ih','ix','ol','on','ov','ox','yn', 'yl','ul','un', 'um'],
+      ['as','ash','es','esh','is','ish','os','osh','us','ush'],
+      ['ana','ane','ani','ano','anu','ena','ene','ani','eno','enu','ina','ine','ini','ino','inu','ona','one','oni','ono','onu','una','une','uni','uno','unu'],
+      ['ata','ate','ati','ato','atu','eta','ete','ati','eto','etu','ita','ite','iti','ito','itu','ota','ote','oti','oto','otu','uta','ute','uti','uto','utu'],
+      ['ara','are','ari','aro','aru','era','ere','ari','ero','eru','ira','ire','iri','iro','iru','ora','ore','ori','oro','oru','ura','ure','uri','uro','uru'],
+      ['as','es','is','os','us'],
+      ['ly','ley','la','li','te','ti','ny','ney','na','ni'],
+      ['lu','lo','to','tu','no','nu','tho','thu'],
+      [' ','\'','-',' ',' ','\'','-',' ',' ','\'','-',' '],
+      [' ','\'',' ','\'',' ','\'',' ','\'',' ','\'',' ','\''],
+      ['cho','chu','cha','che','chi','zho','zhu','zha','zhe','zhi','sho','shu','sha','she','shi','tho','thu','tha','the','thi','pha','phe','phi','pho','phu'],
+      ['at','et','it','ot','ut','ack','eck','ick','ock','uck','ach','ech','ich','och','uch','ak','ik','ek','ik','uk','ac','ic','ec','oc','uk'],
+      ['ha','he','hi','ho','hu','hy','wa','wo','we','wi','wu','ba','be','bi','bo','bu','va','ve','vi','vo','vu','za','ze','zi','zo','zu','la','le','li','lo','lu'],
+      ['1','2','3','4','5','6','7','8','9','0'],
+      ['first', 'second', 'third', 'fourth', 'prime']
+      ]
+
 syls2=[
-syls1[6]+syls1[7]+syls1[8],
-syls1[1]+syls1[0]+syls1[2]
-]
+      syls1[6]+syls1[7]+syls1[8],
+      syls1[1]+syls1[0]+syls1[2]
+      ]
+
 syls=syls1+syls2
+
 def nameGen(*args):
     args=args[0]
     name=[]
