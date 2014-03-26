@@ -103,7 +103,7 @@ def nameGen(*args):
     result=""
     for i in args:
         try:
-            time.sleep(.0001)
+            time.sleep(.0005)
             name.append(choice(syls[int(i)-1]))
         except ValueError:
             name.append(i)
